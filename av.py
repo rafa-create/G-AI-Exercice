@@ -1,4 +1,3 @@
-from random import randint
 from datetime import datetime
 import time
 from db import ava, insert_av
