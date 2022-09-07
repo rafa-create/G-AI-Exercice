@@ -2,8 +2,7 @@ from av import available
 from flask import Flask, request, render_template
 from db import init_db, insert_db, printa
 import threading
-from mail import send_ok
-from datetime import datetime
+#from mail import send_ok
 
 db_name="meetings" #To be created if needed
 init_db(db_name)#initiate DB
