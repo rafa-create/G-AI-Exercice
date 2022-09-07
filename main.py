@@ -1,10 +1,8 @@
-from datetime import datetime
 from av import available
 from flask import Flask, request, render_template
 from db import init_db, insert_db, printa
 import threading
 from mail import send_ok
-import calendar
 from datetime import datetime
 
 db_name="meetings" #To be created if needed
