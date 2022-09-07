@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <div style="text-align:center;">
+        <h1>Sorry!</h1>
+        <h2>We can't schedule this meeting, the person is not available</h3>
+        <p>This page will redirect in <span id="timer"></span>s.</p>
+        <h8>Please, once redirected try an available meeting</h1>    
+    </div>
+        <script type="text/javascript">
+        var count = 5;
+        var redirect = "http://127.0.0.1:5000/";
+        function countDown() {
+        if(count >= 0){
+        document.getElementById("timer").innerHTML = count--;
+        setTimeout("countDown()",3000);
+        }else{
+        window.location.href = redirect;
+        }
+        }
+        countDown();
+        </script>
+
+{% endblock %}
